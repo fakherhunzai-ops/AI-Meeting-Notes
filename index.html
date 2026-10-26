@@ -5,184 +5,491 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="UK accountability and senior international engineering with one transparent delivery system."
+      content="Horizon Consults is a UK technology and AI delivery partner building practical systems with senior international engineering."
     />
-    <title>UK Accountability — Delivery Model</title>
+    <title>Horizon Consults — UK Technology &amp; AI Delivery Partner</title>
     <link rel="stylesheet" href="/src/styles.css" />
+    <script type="module" src="/src/main.js"></script>
   </head>
   <body>
     <svg class="svg-definitions" aria-hidden="true" focusable="false">
-      <symbol id="check-icon" viewBox="0 0 16 16">
-        <path
-          d="M3.4 8.35 6.25 11.2 12.65 4.8"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
+      <defs>
+        <linearGradient id="brand-gradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#7657f6" />
+          <stop offset="1" stop-color="#438cff" />
+        </linearGradient>
+      </defs>
+      <symbol id="icon-check" viewBox="0 0 16 16">
+        <path d="M3.4 8.35 6.25 11.2 12.65 4.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 20 20">
+        <path d="M4 10h11M11 6l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="icon-phone" viewBox="0 0 20 20">
+        <path d="M6.3 2.9 8 6.2 6.4 8a11 11 0 0 0 5.6 5.6l1.8-1.6 3.3 1.7-.5 3c-.1.8-.9 1.4-1.7 1.3A15.4 15.4 0 0 1 2.7 4.6c-.1-.8.5-1.6 1.3-1.7l2.3 0Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="icon-chevron" viewBox="0 0 16 16">
+        <path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="icon-plus" viewBox="0 0 16 16">
+        <path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+      </symbol>
+      <symbol id="icon-users" viewBox="0 0 24 24">
+        <circle cx="9" cy="8" r="3" /><path d="M3.5 19c.6-3.2 2.6-5 5.5-5s4.9 1.8 5.5 5M16 5.5a3 3 0 0 1 0 5.8M17.5 14c2.1.6 3.3 2.2 3.7 4.5" />
+      </symbol>
+      <symbol id="icon-file" viewBox="0 0 24 24">
+        <path d="M7 3h7l4 4v14H7z" /><path d="M14 3v5h4M10 12h5M10 16h5" />
+      </symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24">
+        <path d="M12 3 5 6v6c0 4.2 2.8 7.5 7 9 4.2-1.5 7-4.8 7-9V6l-7-3Z" /><path d="m9 12 2 2 4-4" />
+      </symbol>
+      <symbol id="icon-upload" viewBox="0 0 24 24">
+        <path d="M12 16V4m0 0L8 8m4-4 4 4M5 15v4h14v-4" />
+      </symbol>
+      <symbol id="icon-lock" viewBox="0 0 24 24">
+        <rect x="5" y="10" width="14" height="10" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" />
+      </symbol>
+      <symbol id="icon-test" viewBox="0 0 24 24">
+        <rect x="4" y="4" width="16" height="16" rx="3" /><path d="m8 12 2.5 2.5L16 9" />
+      </symbol>
+      <symbol id="icon-target" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="4" /><circle cx="12" cy="12" r="1" />
+      </symbol>
+      <symbol id="icon-doc" viewBox="0 0 24 24">
+        <path d="M6 3h9l4 4v14H6z" /><path d="M14 3v5h5M9 12h7M9 16h7" />
+      </symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2" /><path d="m9 10-2 2 2 2m6-4 2 2-2 2" />
+      </symbol>
+      <symbol id="icon-chart" viewBox="0 0 24 24">
+        <path d="M4 17 9 12l4 3 7-8" /><path d="M15 7h5v5" />
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24">
+        <rect x="4" y="5" width="16" height="15" rx="2" /><path d="M8 3v4m8-4v4M4 10h16" />
+      </symbol>
+      <symbol id="icon-inbox" viewBox="0 0 24 24">
+        <path d="M4 5h16v14H4z" /><path d="M4 13h5l1 3h4l1-3h5" />
+      </symbol>
+      <symbol id="icon-grid" viewBox="0 0 24 24">
+        <rect x="4" y="4" width="16" height="16" rx="2" /><path d="M4 9h16M4 14h16M10 4v16" />
+      </symbol>
+      <symbol id="icon-person" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="3" /><path d="M6 20c.8-3.8 3-6 6-6s5.2 2.2 6 6" />
+      </symbol>
+      <symbol id="icon-folder" viewBox="0 0 24 24">
+        <path d="M3 7h7l2 2h9v10H3z" />
+      </symbol>
+      <symbol id="icon-approval" viewBox="0 0 24 24">
+        <rect x="4" y="4" width="16" height="16" rx="3" /><path d="m8 12 2.5 2.5L16 9" />
+      </symbol>
+      <symbol id="icon-database" viewBox="0 0 24 24">
+        <ellipse cx="12" cy="6" rx="7" ry="3" /><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3" />
       </symbol>
     </svg>
 
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Horizon Consults home">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <path d="M8 7h7v13h13V7h7v34h-7V27H15v14H8V7Z" fill="url(#brand-gradient)" />
+          <path d="M28 7h12L30 20h-6l4-13ZM15 27h14l-8 14h-6v-14Z" fill="#7657f6" opacity=".85" />
+        </svg>
+        <span class="brand-copy">
+          <strong>Horizon Consults</strong>
+          <small>UK TECHNOLOGY &amp; AI DELIVERY</small>
+        </span>
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+        <a href="#services">Services <svg class="icon tiny"><use href="#icon-chevron" /></svg></a>
+        <a href="#process">How We Work</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#capabilities">Insights</a>
+        <a href="#delivery-model">Company <svg class="icon tiny"><use href="#icon-chevron" /></svg></a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="uk-contact" href="#contact"><svg class="icon"><use href="#icon-phone" /></svg><span>UK contact</span></a>
+        <a class="button button--primary button--small" href="#contact">Book a Call</a>
+        <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
     <main>
-      <section class="delivery-model" aria-labelledby="delivery-model-title">
-        <div class="section-container">
-          <header class="section-header">
-            <p class="eyebrow">A straightforward delivery model</p>
-            <h1 class="section-title" id="delivery-model-title">
-              <span>UK accountability.</span>
-              <span>Senior international</span>
-              <span>engineering.</span>
+      <!-- Hero -->
+      <section class="section hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow eyebrow--dark">UK TECHNOLOGY &amp; AI DELIVERY PARTNER</p>
+            <h1 class="display" id="hero-title">
+              <span>Find the problem</span>
+              <span>worth solving.</span>
+              <span>Then build</span>
+              <span class="gradient-text">it properly.</span>
             </h1>
-            <p class="section-intro">
-              Your commercial relationship and day-to-day accountability sit with a
-              UK contact. The engineering, design and QA work is delivered by a
-              senior team in Pakistan. It is a transparent, distributed model
-              designed for close communication and sensible delivery economics.
-            </p>
-          </header>
-
-          <div class="delivery-grid">
-            <article class="delivery-card delivery-card--uk">
-              <h2 class="card-heading">UK Accountability</h2>
-              <ul class="capability-list">
-                <li class="capability">
-                  <svg class="check-icon" aria-hidden="true"><use href="#check-icon" /></svg>
-                  <div class="capability-content">
-                    <h3>Client relationship</h3>
-                    <p>One senior UK contact who knows your business.</p>
-                  </div>
-                </li>
-                <li class="capability">
-                  <svg class="check-icon" aria-hidden="true"><use href="#check-icon" /></svg>
-                  <div class="capability-content">
-                    <h3>Commercial responsibility</h3>
-                    <p>Contracts, pricing and scope owned in the UK.</p>
-                  </div>
-                </li>
-                <li class="capability">
-                  <svg class="check-icon" aria-hidden="true"><use href="#check-icon" /></svg>
-                  <div class="capability-content">
-                    <h3>Strategy &amp; scope</h3>
-                    <p>Problem-framing and acceptance criteria set with you.</p>
-                  </div>
-                </li>
-                <li class="capability">
-                  <svg class="check-icon" aria-hidden="true"><use href="#check-icon" /></svg>
-                  <div class="capability-content">
-                    <h3>Communication</h3>
-                    <p>Weekly demos, written updates, a phone number that answers.</p>
-                  </div>
-                </li>
-              </ul>
-            </article>
-
-            <div class="delivery-system" aria-labelledby="system-title">
-              <svg
-                class="delivery-system-graphic"
-                viewBox="0 0 460 460"
-                role="img"
-                aria-labelledby="system-title system-description"
-              >
-                <title id="system-title">Horizon Delivery System</title>
-                <desc id="system-description">
-                  A circular delivery system connecting design, architecture,
-                  engineering, discovery, QA and release around one team.
-                </desc>
-
-                <circle class="orbit orbit--outer" cx="230" cy="230" r="220" />
-                <circle class="orbit orbit--inner" cx="230" cy="230" r="161" />
-                <circle class="core" cx="230" cy="230" r="118" />
-
-                <g class="role-node">
-                  <circle cx="230" cy="32.75" r="32.25" />
-                  <text x="230" y="33">Design</text>
-                </g>
-                <g class="role-node">
-                  <circle cx="400.8" cy="131.4" r="32.25" />
-                  <text x="400.8" y="131.4">Arch</text>
-                </g>
-                <g class="role-node">
-                  <circle cx="400.8" cy="328.6" r="32.25" />
-                  <text x="400.8" y="328.6">Eng</text>
-                </g>
-                <g class="role-node">
-                  <circle cx="230" cy="427.25" r="32.25" />
-                  <text x="230" y="427.25">Disc</text>
-                </g>
-                <g class="role-node">
-                  <circle cx="59.2" cy="328.6" r="32.25" />
-                  <text x="59.2" y="328.6">QA</text>
-                </g>
-                <g class="role-node">
-                  <circle cx="59.2" cy="131.4" r="32.25" />
-                  <text x="59.2" y="131.4">Release</text>
-                </g>
-
-                <text class="core-eyebrow" x="230" y="200">HORIZON</text>
-                <text class="core-title" x="230" y="232">Delivery System</text>
-                <text class="core-footnote" x="230" y="266">ONE TEAM</text>
-              </svg>
+            <p class="hero-intro">Horizon Consults is a UK technology and AI delivery partner. We<br class="desktop-break" /> identify the highest-value opportunity in your business — an AI<br class="desktop-break" /> workflow, a custom system or a new product — and deliver it<br class="desktop-break" /> with UK accountability, a senior team and pricing that reflects<br class="desktop-break" /> real delivery economics.</p>
+            <div class="hero-actions">
+              <a class="button button--gradient" href="#contact">Book a Free 30-Minute Discovery Call <svg class="icon"><use href="#icon-arrow" /></svg></a>
+              <a class="button button--secondary" href="#process">See How We Work</a>
             </div>
-
-            <article class="delivery-card delivery-card--senior">
-              <h2 class="card-heading">Senior Delivery Team</h2>
-              <ul class="capability-list">
-                <li class="capability">
-                  <svg class="check-icon" aria-hidden="true"><use href="#check-icon" /></svg>
-                  <div class="capability-content">
-                    <h3>Engineering</h3>
-                    <p>Senior developers who have shipped systems, not just tickets.</p>
-                  </div>
-                </li>
-                <li class="capability">
-                  <svg class="check-icon" aria-hidden="true"><use href="#check-icon" /></svg>
-                  <div class="capability-content">
-                    <h3>Design</h3>
-                    <p>Product design that starts from the workflow, not the wireframe.</p>
-                  </div>
-                </li>
-                <li class="capability">
-                  <svg class="check-icon" aria-hidden="true"><use href="#check-icon" /></svg>
-                  <div class="capability-content">
-                    <h3>Product</h3>
-                    <p>Prioritisation and scope shaped by commercial outcomes.</p>
-                  </div>
-                </li>
-                <li class="capability capability--new">
-                  <svg class="check-icon" aria-hidden="true"><use href="#check-icon" /></svg>
-                  <div class="capability-content">
-                    <h3>Product &amp; Project Management</h3>
-                    <p>Product direction, planning and delivery coordination kept aligned from scope through release.</p>
-                  </div>
-                </li>
-                <li class="capability">
-                  <svg class="check-icon" aria-hidden="true"><use href="#check-icon" /></svg>
-                  <div class="capability-content">
-                    <h3>QA &amp; technical leadership</h3>
-                    <p>Automated testing, reviewed code, architecture oversight.</p>
-                  </div>
-                </li>
-              </ul>
-            </article>
           </div>
 
-          <div class="proof-strip" aria-label="Delivery guarantees">
-            <div class="proof-item">
-              <svg class="check-icon" aria-hidden="true"><use href="#check-icon" /></svg>
-              <span>One accountable delivery lead</span>
+          <div class="hero-visual-stack" aria-label="From fragmented business to connected business">
+            <div class="transformation-card">
+              <div class="transformation-labels">
+                <span>Fragmented business</span>
+                <strong class="gradient-text">Horizon</strong>
+                <span>Connected business</span>
+              </div>
+              <svg class="transformation-curves" viewBox="0 0 590 340" aria-hidden="true">
+                <path d="M185 70 C245 70 260 145 330 145" />
+                <path d="M185 120 C245 120 270 160 330 160" />
+                <path d="M185 170 C245 170 270 175 330 175" />
+                <path d="M185 220 C245 220 270 190 330 190" />
+                <path d="M185 270 C245 270 260 205 330 205" />
+              </svg>
+              <div class="fragmented-column">
+                <div class="fragment-row"><span class="mini-icon"><svg class="icon"><use href="#icon-inbox" /></svg></span><span><b>Inbox</b><small class="warm">RE-TYPED BY HAND</small></span><i class="dot dot--orange"></i></div>
+                <div class="fragment-row"><span class="mini-icon"><svg class="icon"><use href="#icon-grid" /></svg></span><span><b>Spreadsheet</b><small class="warm">DUPLICATE ROWS</small></span><i class="dot dot--orange"></i></div>
+                <div class="fragment-row"><span class="mini-icon"><svg class="icon"><use href="#icon-person" /></svg></span><span><b>CRM</b><small class="warm">NOT SYNCED</small></span><i class="dot dot--orange"></i></div>
+                <div class="fragment-row"><span class="mini-icon"><svg class="icon"><use href="#icon-folder" /></svg></span><span><b>Documents</b><small class="warm">SCATTERED FILES</small></span><i class="dot dot--orange"></i></div>
+                <div class="fragment-row"><span class="mini-icon"><svg class="icon"><use href="#icon-approval" /></svg></span><span><b>Approvals</b><small class="warm">OVERDUE SIGN-OFF</small></span><i class="dot dot--orange"></i></div>
+                <div class="fragment-row"><span class="mini-icon"><svg class="icon"><use href="#icon-database" /></svg></span><span><b>Legacy system</b><small class="warm">NO INTEGRATION</small></span><i class="dot dot--orange"></i></div>
+              </div>
+              <div class="horizon-column">
+                <span class="h-badge">H</span>
+                <strong>Horizon</strong>
+                <span class="capability-pill">AUTOMATION</span>
+                <span class="capability-pill">AI</span>
+                <span class="capability-pill">INTEGRATION</span>
+                <span class="capability-pill">BUSINESS LOGIC</span>
+                <i class="connector connector--left"></i>
+                <i class="connector connector--right"></i>
+              </div>
+              <div class="connected-panel">
+                <div class="connected-heading"><strong>Connected operations</strong><span class="pill pill--green">LIVE</span></div>
+                <div class="connected-block"><span>WORKFLOW</span><b class="accent">AUTOMATED</b><div><span class="chip chip--blue">Capture</span><span class="chip chip--blue">AI check</span><span class="chip chip--green">Routed</span></div></div>
+                <div class="connected-block"><span>APPROVAL</span><b class="accent">HUMAN</b><p>Invoice batch <span class="mini-button">Approve</span></p></div>
+                <div class="connected-block"><span>REPORTING</span><b class="accent">LIVE</b><svg class="sparkline" viewBox="0 0 160 36"><path d="M2 28 32 21 62 24 92 11 122 17 158 5" /></svg></div>
+                <div class="connected-block"><span>INFORMATION</span><b class="accent">CENTRAL</b><p>Client file <span class="mini-button">Synced</span></p></div>
+              </div>
             </div>
-            <div class="proof-item">
-              <svg class="check-icon" aria-hidden="true"><use href="#check-icon" /></svg>
-              <span>One documented process</span>
-            </div>
-            <div class="proof-item">
-              <svg class="check-icon" aria-hidden="true"><use href="#check-icon" /></svg>
-              <span>One team you can phone</span>
+
+            <div class="friction-card">
+              <div class="friction-heading"><span>FROM FRICTION TO FLOW</span><span>A TYPICAL ENGAGEMENT</span></div>
+              <div class="friction-line"></div>
+              <div class="friction-steps">
+                <div class="friction-step"><b class="step-bubble">01</b><div><strong>Tell us what is getting in the way</strong><p>One honest conversation</p></div></div>
+                <div class="friction-step"><b class="step-bubble">02</b><div><strong>Find the highest-value opportunity</strong><p>Workflow, system or product</p></div></div>
+                <div class="friction-step"><b class="step-bubble">03</b><div><strong>Build with a named senior team</strong><p>Visible progress, reviewed work</p></div></div>
+                <div class="friction-step"><b class="step-bubble">04</b><div><strong>Launch something useful</strong><p>Measured against the agreed goal</p></div></div>
+              </div>
+              <a class="text-link" href="#process">Start with the problem, not the tool <svg class="icon tiny"><use href="#icon-arrow" /></svg></a>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Problem -->
+      <section class="section problem" id="problem" aria-labelledby="problem-title">
+        <div class="container">
+          <p class="eyebrow">WHERE PROGRESS STALLS</p>
+          <h2 class="section-title" id="problem-title"><span>Your business has moved on.</span><span class="gradient-text">Your tools have not.</span></h2>
+          <div class="problem-grid">
+            <div class="problem-list" role="list">
+              <div class="problem-item is-active" role="listitem"><span>01</span><p>Your team is still copying information between inboxes, spreadsheets and systems that do not talk to each other.</p><i class="dot dot--orange"></i></div>
+              <div class="problem-item" role="listitem"><span>02</span><p>A spreadsheet that once helped now runs a critical part of the business — and only one person truly understands it.</p></div>
+              <div class="problem-item" role="listitem"><span>03</span><p>You keep hearing about AI, but no one has shown you a useful, sensible place to begin.</p></div>
+              <div class="problem-item" role="listitem"><span>04</span><p>You have a product idea, but need a team that can challenge the brief as well as build it.</p></div>
+            </div>
+            <div class="legacy-visual" aria-label="How disconnected work runs today">
+              <div class="legacy-header"><strong>How the work runs today</strong><span class="pill pill--peach">DISCONNECTED</span></div>
+              <div class="legacy-grid">
+                <div class="legacy-box"><span>SPREADSHEET</span><b class="warm">RE-KEYED</b><div class="skeleton-table"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+                <div class="legacy-box"><span>INTERNAL SYSTEM</span><b class="warm">NO ACCESS</b><div class="code-window"><p>&gt; re-key_client_4412</p><p>&gt; export -&gt; manually</p><p>no integration available</p></div></div>
+                <div class="legacy-box"><span>INBOX</span><b class="warm">RE-TYPED</b><div class="skeleton-lines"><i></i><i></i></div></div>
+                <div class="legacy-box"><span>DOCUMENTS</span><b class="warm">SCATTERED</b><div class="skeleton-lines short"><i></i><i></i><i></i></div></div>
+                <div class="legacy-box"><span>APPROVALS</span><b class="warm">OVERDUE</b><div class="legacy-bottom"><p>Purchase sign-off</p><span class="pill pill--peach">WAITING</span></div></div>
+                <div class="legacy-box"><span>REPORTING</span><b class="warm">BY HAND</b><div class="skeleton-lines short"><i></i><i></i></div></div>
+                <span class="disconnect-mark disconnect-mark--one">×</span><span class="disconnect-mark disconnect-mark--two">×</span>
+              </div>
+              <div class="legacy-flow"><span class="warm">Outgrown tools</span><i>→</i><span class="warm">Fragmented process</span><i>→</i><span class="warm">Manual effort</span><i>→</i><span class="pill pill--gradient">One connected system</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core services -->
+      <section class="section services" id="services" aria-labelledby="services-title">
+        <div class="container">
+          <p class="eyebrow">CORE SERVICES</p>
+          <h2 class="section-title" id="services-title"><span>The right technology for</span><span class="gradient-text">the right problem.</span></h2>
+          <p class="section-lead">Four ways in. Every engagement is scoped and agreed before work begins — with a first deliverable you can plan around.</p>
+          <div class="services-grid">
+            <div class="service-list" role="tablist" aria-label="Core services">
+              <button class="service-row is-active" type="button" role="tab" aria-selected="true" data-service="workflow">
+                <span class="service-number">01</span>
+                <span class="service-content"><span class="service-tag">WORKFLOW</span><span class="service-explore">Explore <svg class="icon tiny"><use href="#icon-arrow" /></svg></span><strong>AI Automation for Business</strong><span class="service-description">Connect the systems you already use and remove repetitive admin from enquiries, documents, reporting, handovers and follow-up.</span></span>
+              </button>
+              <button class="service-row" type="button" role="tab" aria-selected="false" data-service="agents">
+                <span class="service-number">02</span>
+                <span class="service-content"><span class="service-tag">JUDGEMENT</span><span class="service-explore">Explore <svg class="icon tiny"><use href="#icon-arrow" /></svg></span><strong>AI Agents</strong><span class="service-description">Build a tailored agent that can understand a request, take useful action across your tools and hand decisions back to a person at the right moment.</span></span>
+              </button>
+              <button class="service-row" type="button" role="tab" aria-selected="false" data-service="software">
+                <span class="service-number">03</span>
+                <span class="service-content"><span class="service-tag">OPERATIONS</span><span class="service-explore">Explore <svg class="icon tiny"><use href="#icon-arrow" /></svg></span><strong>Custom Software &amp; Web Apps</strong><span class="service-description">Replace an outgrown spreadsheet or awkward tool stack with a dependable internal system, portal or web application shaped around your work.</span></span>
+              </button>
+              <button class="service-row" type="button" role="tab" aria-selected="false" data-service="mvp">
+                <span class="service-number">04</span>
+                <span class="service-content"><span class="service-tag">NEW PRODUCT</span><span class="service-explore">Explore <svg class="icon tiny"><use href="#icon-arrow" /></svg></span><strong>MVP Development</strong><span class="service-description">Turn a product idea into a focused first release that is robust enough to learn from — without spending months building the wrong features.</span></span>
+              </button>
+            </div>
+            <div class="service-panel" id="service-panel" aria-live="polite">
+              <div class="service-panel-top"><span id="service-panel-label">01 · WORKFLOW</span><span id="service-panel-tools">Inbox · Sheets · CRM</span></div>
+              <div class="service-workflow">
+                <div class="input-card"><span id="service-panel-input">INQUIRY INBOX</span><i></i><i></i><i></i></div>
+                <div class="workflow-arrow">→</div>
+                <div class="automation-column"><span class="automation-button" id="service-panel-action">Automation</span><span class="output-line" id="service-output-1">Sheets updated</span><span class="output-line" id="service-output-2">CRM record synced</span><span class="output-line output-line--green" id="service-output-3">Report sent</span></div>
+              </div>
+              <div class="service-panel-footer"><span class="pill pill--outline" id="service-panel-note-1">NO RE-TYPING</span><span class="pill pill--outline" id="service-panel-note-2">HANDOVER REMOVED</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Horizon -->
+      <section class="section why" id="why-horizon" aria-labelledby="why-title">
+        <div class="container narrow">
+          <p class="eyebrow">WHY HORIZON CONSULTS</p>
+          <div class="why-grid">
+            <div>
+              <h2 class="section-title section-title--large" id="why-title"><span>Good software</span><span>starts with</span><span class="gradient-text">better judgement.</span></h2>
+              <p class="section-lead">A useful partner does more than take orders. We help you decide what is worth doing, what can wait and how to keep the work accountable.</p>
+            </div>
+            <div class="principle-list">
+              <div class="principle"><span>01</span><div><strong>Business-first discovery</strong><p>We look at where time, revenue or customer experience is leaking before talking about technology.</p></div></div>
+              <div class="principle"><span>02</span><div><strong>Senior people stay involved</strong><p>The people shaping the approach remain close to the work. You are not handed from a sales team to an anonymous bench.</p></div></div>
+              <div class="principle"><span>03</span><div><strong>Commercial clarity</strong><p>Scope, assumptions, price and change control are written down before build begins, so everyone knows where they stand.</p></div></div>
+              <div class="principle"><span>04</span><div><strong>Built to belong to you</strong><p>You receive the agreed code, documentation and intellectual property. We build a useful asset, not a dependency.</p></div></div>
+            </div>
+          </div>
+          <div class="registration-strip">
+            <div><span>REGISTRATION</span><strong>UK-registered company</strong><p class="muted-brown">Company number published before launch</p></div>
+            <div><span>REGISTERED ADDRESS</span><strong>United Kingdom</strong><p class="muted-brown">Full address published before launch</p></div>
+            <div><span>PHONE</span><strong>UK number, answered</strong><p class="muted-brown">Click-to-call goes live before launch</p></div>
+            <div><span>LINKEDIN</span><strong>Company profile</strong><p class="muted-brown">Link goes live before launch</p></div>
+            <div><span>INDEPENDENT REVIEWS</span><strong>Review profiles</strong><p class="muted-brown">Clutch / Trustpilot linked once live</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Delivery model -->
+      <section class="section delivery-model" id="delivery-model" aria-labelledby="delivery-model-title">
+        <div class="container delivery-container">
+          <header class="delivery-header">
+            <p class="delivery-eyebrow">A straightforward delivery model</p>
+            <h2 class="delivery-title" id="delivery-model-title"><span>UK accountability.</span><span>Senior international</span><span>engineering.</span></h2>
+            <p class="delivery-intro">Your commercial relationship and day-to-day accountability sit with a UK contact. The engineering, design and QA work is delivered by a senior team in Pakistan. It is a transparent, distributed model designed for close communication and sensible delivery economics.</p>
+          </header>
+          <div class="delivery-grid">
+            <article class="delivery-card delivery-card--uk">
+              <h3 class="card-heading">UK Accountability</h3>
+              <ul class="capability-list">
+                <li class="capability"><svg class="check-icon"><use href="#icon-check" /></svg><div><h4>Client relationship</h4><p>One senior UK contact who knows your business.</p></div></li>
+                <li class="capability"><svg class="check-icon"><use href="#icon-check" /></svg><div><h4>Commercial responsibility</h4><p>Contracts, pricing and scope owned in the UK.</p></div></li>
+                <li class="capability"><svg class="check-icon"><use href="#icon-check" /></svg><div><h4>Strategy &amp; scope</h4><p>Problem-framing and acceptance criteria set with you.</p></div></li>
+                <li class="capability"><svg class="check-icon"><use href="#icon-check" /></svg><div><h4>Communication</h4><p>Weekly demos, written updates, a phone number that answers.</p></div></li>
+              </ul>
+            </article>
+            <div class="delivery-system" aria-labelledby="system-title">
+              <svg class="delivery-system-graphic" viewBox="0 0 430 430" role="img" aria-labelledby="system-title system-description">
+                <title id="system-title">Horizon Delivery System</title><desc id="system-description">A circular delivery system connecting design, architecture, engineering, discovery, QA and release around one team.</desc>
+                <circle class="orbit orbit--outer" cx="215" cy="215" r="205" />
+                <circle class="orbit orbit--inner" cx="215" cy="215" r="150" />
+                <circle class="core" cx="215" cy="215" r="110" />
+                <g class="role-node"><circle cx="215" cy="30" r="29" /><text x="215" y="30">Design</text></g>
+                <g class="role-node"><circle cx="376" cy="122" r="29" /><text x="376" y="122">Arch</text></g>
+                <g class="role-node"><circle cx="376" cy="308" r="29" /><text x="376" y="308">Eng</text></g>
+                <g class="role-node"><circle cx="215" cy="400" r="29" /><text x="215" y="400">Disc</text></g>
+                <g class="role-node"><circle cx="54" cy="308" r="29" /><text x="54" y="308">QA</text></g>
+                <g class="role-node"><circle cx="54" cy="122" r="29" /><text x="54" y="122">Release</text></g>
+                <text class="core-eyebrow" x="215" y="183">HORIZON</text><text class="core-title" x="215" y="216">Delivery System</text><text class="core-footnote" x="215" y="249">ONE TEAM</text>
+              </svg>
+            </div>
+            <article class="delivery-card delivery-card--senior">
+              <h3 class="card-heading">Senior Delivery Team</h3>
+              <ul class="capability-list">
+                <li class="capability"><svg class="check-icon"><use href="#icon-check" /></svg><div><h4>Engineering</h4><p>Senior developers who have shipped systems, not just tickets.</p></div></li>
+                <li class="capability"><svg class="check-icon"><use href="#icon-check" /></svg><div><h4>Design</h4><p>Product design that starts from the workflow, not the wireframe.</p></div></li>
+                <li class="capability"><svg class="check-icon"><use href="#icon-check" /></svg><div><h4>Product</h4><p>Prioritisation and scope shaped by commercial outcomes.</p></div></li>
+                <li class="capability"><svg class="check-icon"><use href="#icon-check" /></svg><div><h4>Product &amp; Project Management</h4><p>Product direction, planning and delivery coordination kept aligned from scope through release.</p></div></li>
+                <li class="capability"><svg class="check-icon"><use href="#icon-check" /></svg><div><h4>QA &amp; technical leadership</h4><p>Automated testing, reviewed code, architecture oversight.</p></div></li>
+              </ul>
+            </article>
+          </div>
+          <div class="proof-strip" aria-label="Delivery guarantees">
+            <div class="proof-item"><svg class="check-icon"><use href="#icon-check" /></svg><span>One accountable delivery lead</span></div>
+            <div class="proof-item"><svg class="check-icon"><use href="#icon-check" /></svg><span>One documented process</span></div>
+            <div class="proof-item"><svg class="check-icon"><use href="#icon-check" /></svg><span>One team you can phone</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case studies -->
+      <section class="section case-studies" id="case-studies" aria-labelledby="cases-title">
+        <div class="container narrow">
+          <p class="eyebrow">CASE STUDIES</p>
+          <h2 class="section-title" id="cases-title"><span>Proof over <span class="gradient-text">promises.</span></span></h2>
+          <p class="section-lead section-lead--wide">Three engagements are being documented for publication now. Each is published only with the client’s written approval — with measured outcomes, not marketing numbers.</p>
+
+          <div class="case-list">
+            <article class="case-study case-study--visual-left">
+              <div class="case-visual dashboard-visual">
+                <div class="browser-bar"><span class="browser-dots"><i></i><i></i><i></i></span><span>client-portal.demo / operations</span></div>
+                <div class="dashboard-content"><div class="skeleton-title"></div><div class="metric-grid"><div><span>THROUGHPUT</span><svg viewBox="0 0 100 36"><path d="M5 28 30 20 55 23 95 8" /></svg></div><div><span>EXCEPTIONS</span><b>—</b></div><div><span>HOURS RETURNED</span><b>—</b></div><div class="metric-status"><span>STATUS</span><b>IN APPROVAL</b></div></div><div class="dashboard-table"><i></i><i></i><i></i><i></i></div></div>
+              </div>
+              <div class="case-content"><span class="case-label">OPERATIONS PLATFORM · UK SME</span><h3>From spreadsheet operations to a system that runs the day.</h3><dl class="case-details"><div><dt>CLIENT · INDUSTRY</dt><dd>UK SME — details on publication</dd></div><div><dt>PROBLEM</dt><dd>Published with client consent</dd></div><div><dt>WHAT HORIZON BUILT</dt><dd>Case study in client approval</dd></div><div><dt>TECHNOLOGY</dt><dd>Stack confirmed at publication</dd></div><div><dt>TIMELINE</dt><dd>Confirmed at publication</dd></div><div><dt>MEASURED OUTCOME</dt><dd>With client sign-off</dd></div></dl></div>
+            </article>
+
+            <article class="case-study case-study--visual-right">
+              <div class="case-content"><span class="case-label">AI AGENTS · PROFESSIONAL SERVICES</span><h3>An agent that does the work — with a human still holding the pen.</h3><dl class="case-details"><div><dt>CLIENT · INDUSTRY</dt><dd>UK firm — details on publication</dd></div><div><dt>PROBLEM</dt><dd>Published with client consent</dd></div><div><dt>WHAT HORIZON BUILT</dt><dd>Case study in client approval</dd></div><div><dt>TECHNOLOGY</dt><dd>Stack confirmed at publication</dd></div><div><dt>TIMELINE</dt><dd>Confirmed at publication</dd></div><div><dt>MEASURED OUTCOME</dt><dd>With client sign-off</dd></div></dl></div>
+              <div class="case-visual agent-visual">
+                <div class="browser-bar"><span class="browser-dots"><i></i><i></i><i></i></span><span>agent-console.demo / approvals</span></div>
+                <div class="agent-flow"><div class="agent-side"><div class="agent-node"><b>TRIAGE</b><i></i></div><div class="agent-node"><b>MATCHING</b><i></i></div></div><svg class="agent-lines" viewBox="0 0 220 220"><path d="M0 65 C55 65 60 110 105 110M0 165 C55 165 60 125 105 125M155 100 C190 100 190 65 220 65M155 130 C190 130 190 165 220 165" /></svg><div class="phone-mock"><div class="phone-notch"></div><span class="phone-status">Approve Invoice<br />INV – 448 £1,876</span><div class="phone-agent"><span>AGENT · 5 checks</span><p>34 Invoices matched<br />2 exceptions flagged<br />ledger updated</p></div><span class="phone-button">Approve batch</span><span class="phone-link">View exceptions</span></div><div class="agent-side agent-side--right"><div class="agent-node"><b>LEDGER SYNC</b><i></i></div><span class="human-signoff">HUMAN<br />SIGN-OFF</span></div></div>
+              </div>
+            </article>
+
+            <article class="case-study case-study--visual-left">
+              <div class="case-visual flow-visual">
+                <div class="browser-bar"><span class="browser-dots"><i></i><i></i><i></i></span><span>delivery-flow.demo / before-after</span></div>
+                <div class="flow-content"><span class="flow-label">BEFORE</span><div class="before-flow"><span>Phone</span><i>×</i><span>Email</span><i>×</i><span>Sheet</span><i>×</i><span>Re-type</span><i>×</i><span>Chase</span><i>×</i><span>?</span></div><span class="flow-label flow-label--blue">AFTER · ONE SYSTEM</span><div class="after-flow"><span>Capture</span><i></i><span>AI check</span><i></i><span>Approve</span><i></i><span class="green">Deliver</span><i></i></div><div class="flow-note"><span>Five handoffs, three tools, one owner</span><span>→ one flow, one system, one accountable team</span></div></div>
+              </div>
+              <div class="case-content"><span class="case-label">WORKFLOW AUTOMATION · UK SME</span><h3>Five handoffs become one flow.</h3><dl class="case-details"><div><dt>CLIENT · INDUSTRY</dt><dd>UK SME — details on publication</dd></div><div><dt>PROBLEM</dt><dd>Published with client consent</dd></div><div><dt>WHAT HORIZON BUILT</dt><dd>Case study in client approval</dd></div><div><dt>TECHNOLOGY</dt><dd>Stack confirmed at publication</dd></div><div><dt>TIMELINE</dt><dd>Confirmed at publication</dd></div><div><dt>MEASURED OUTCOME</dt><dd>With client sign-off</dd></div></dl></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-transition" aria-hidden="true"></div>
+
+      <!-- Governance -->
+      <section class="section governance" id="governance" aria-labelledby="governance-title">
+        <div class="container narrow">
+          <p class="eyebrow">GOVERNANCE</p>
+          <h2 class="section-title section-title--inline" id="governance-title"><span>Clear ownership.</span><span class="gradient-text">Careful delivery.</span></h2>
+          <p class="section-lead">Every project runs on the same documented process — the detail most agencies hide, published here because it’s how we work.</p>
+          <div class="governance-grid">
+            <div class="pipeline-visual"><div class="pipeline-top"><span class="pipeline-toggle"><i></i></span><i class="skeleton-bar"></i></div><div class="pipeline-line"></div><div class="pipeline-steps"><span class="pipeline-node is-active">01<small>Discover</small></span><span class="pipeline-node">02<small>Architecture</small></span><span class="pipeline-node">03<small>Build</small></span><span class="pipeline-node">04<small>Review</small></span><span class="pipeline-node">05<small>Test</small></span><span class="pipeline-node">06<small>Release</small></span><span class="pipeline-node is-done">✓<small>Monitor</small></span></div></div>
+            <div class="governance-points">
+              <div><svg class="icon"><use href="#icon-users" /></svg><strong>Named engineers</strong><p>You know exactly who builds your system.</p></div>
+              <div><svg class="icon"><use href="#icon-file" /></svg><strong>Reviewed pull requests</strong><p>No code merges without a second senior pair of eyes.</p></div>
+              <div><svg class="icon"><use href="#icon-shield" /></svg><strong>Automated testing</strong><p>Every build is verified before it reaches you.</p></div>
+              <div><svg class="icon"><use href="#icon-upload" /></svg><strong>Controlled releases</strong><p>Staged rollouts with rollback, not hopeful deployments.</p></div>
+              <div><svg class="icon"><use href="#icon-lock" /></svg><strong>GDPR-aware handling</strong><p>Data protection designed in, with UK GDPR guidance.</p></div>
+              <div><svg class="icon"><use href="#icon-test" /></svg><strong>Clear IP ownership</strong><p>Every line of code and every document is yours.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="section process" id="process" aria-labelledby="process-title">
+        <div class="container narrow">
+          <p class="eyebrow">Discovery comes first</p>
+          <h2 class="section-title" id="process-title"><span>Five steps from open question</span><span class="gradient-text">to working system.</span></h2>
+          <p class="section-lead">You should understand what is happening, why it matters and what comes next at every stage.</p>
+          <div class="process-timeline">
+            <div class="timeline-line"></div>
+            <div class="process-step is-left"><div class="process-card"><span>01</span><strong>Discover</strong><p>Understand the business problem, users, constraints and measures of success.</p><span class="process-pill">FREE · 30 MINUTES</span></div><span class="timeline-dot"></span><div class="process-icon"><svg class="icon"><use href="#icon-target" /></svg></div></div>
+            <div class="process-step is-right"><div class="process-icon"><svg class="icon"><use href="#icon-target" /></svg></div><span class="timeline-dot"></span><div class="process-card"><span>02</span><strong>Shape</strong><p>Compare options, remove assumptions and define the smallest valuable scope.</p><span class="process-pill">HIGHEST-VALUE PROBLEM</span></div></div>
+            <div class="process-step is-left"><div class="process-card"><span>03</span><strong>Agree</strong><p>Set deliverables, timeframe, price, responsibilities and change control.</p><span class="process-pill">FIXED PRICE · BEFORE WORK BEGINS</span></div><span class="timeline-dot"></span><div class="process-icon"><svg class="icon"><use href="#icon-doc" /></svg></div></div>
+            <div class="process-step is-right"><div class="process-icon"><svg class="icon"><use href="#icon-code" /></svg></div><span class="timeline-dot"></span><div class="process-card"><span>04</span><strong>Build</strong><p>Work in short cycles with visible demos, reviewed code and clear decisions.</p><span class="process-pill">WEEKLY DEMOS</span></div></div>
+            <div class="process-step is-left"><div class="process-card"><span>05</span><strong>Launch &amp; learn</strong><p>Release carefully, document properly and measure the agreed outcome.</p><span class="process-pill">MEASURED AGAINST THE OUTCOME</span></div><span class="timeline-dot"></span><div class="process-icon"><svg class="icon"><use href="#icon-chart" /></svg></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fractional leadership -->
+      <section class="section fractional" id="leadership" aria-labelledby="leadership-title">
+        <div class="container narrow">
+          <p class="eyebrow">FRACTIONAL LEADERSHIP</p>
+          <h2 class="section-title section-title--large" id="leadership-title"><span>Sometimes you don’t need</span><span>another development team.</span><span>You need <span class="gradient-text">the right person</span></span><span class="gradient-text">running the one you have.</span></h2>
+          <div class="fractional-grid">
+            <div class="leadership-options">
+              <div class="leadership-row"><span class="leadership-icon"><svg class="icon"><use href="#icon-calendar" /></svg></span><div><strong>Fractional Project Manager</strong><div class="rate-pills"><span>£650/day</span><span>1–5 days a week</span><span>PMI-ACP led</span></div><p>Delivery governance, project momentum, risk management and technical project leadership — for teams who need the discipline without the full-time hire.</p></div></div>
+              <div class="leadership-row"><span class="leadership-icon"><svg class="icon"><use href="#icon-target" /></svg></span><div><strong>Fractional Product Manager</strong><div class="rate-pills"><span>£650/day</span><span>1–3 days a week</span></div><p>Product strategy, roadmaps, prioritisation, requirements and delivery alignment — a senior product brain alongside your team, on the days you need it.</p></div></div>
+              <div class="leadership-note">Day-rate band, published openly. Minimum engagement one day a week; most clients start with two and adjust per month.</div>
+            </div>
+            <div class="delivery-lead-card"><strong>Your delivery lead this week</strong><div class="week-grid"><div><span>MON</span><i class="is-active"></i><small>PM</small></div><div><span>TUE</span><i></i><small>—</small></div><div><span>WED</span><i class="is-active"></i><small>PM</small></div><div><span>THU</span><i></i><small>—</small></div><div><span>FRI</span><i></i><small>—</small></div></div><ul><li><svg class="check-icon"><use href="#icon-check" /></svg>Risk register reviewed and re-scored</li><li><svg class="check-icon"><use href="#icon-check" /></svg>Sprint review run with your team</li><li><svg class="check-icon"><use href="#icon-check" /></svg>Board-ready delivery update written</li><li><svg class="check-icon"><use href="#icon-check" /></svg>Roadmap re-prioritised against commercial goals</li></ul></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Capability map -->
+      <section class="section capabilities" id="capabilities" aria-labelledby="capabilities-title">
+        <div class="container narrow">
+          <h2 class="section-title" id="capabilities-title"><span>The skills needed to move from</span><span class="gradient-text">problem to working product.</span></h2>
+          <p class="section-lead section-lead--wide">Horizon brings together the design, technical and delivery skills required for each engagement — without forcing clients to coordinate multiple suppliers.</p>
+          <div class="capability-map-scroll">
+            <div class="capability-map">
+              <svg class="capability-lines" viewBox="0 0 1168 360" aria-hidden="true"><path d="M584 58V110M160 110h848M160 110v34M371 110v34M584 110v34M797 110v34M1010 110v34M160 168v30M371 168v30M584 168v30M797 168v30M1010 168v30M160 222v30M371 222v30M797 222v30M1010 222v30M371 276v30M371 330v30M1010 276v30" /></svg>
+              <div class="map-root"><span class="map-logo">H</span><strong>HORIZON</strong><small>One delivery team</small></div>
+              <div class="map-column map-column--design"><span class="map-category">DESIGN</span><span>Product Design</span><span>UX Design</span><span>UI Design</span></div>
+              <div class="map-column map-column--engineering"><span class="map-category">ENGINEERING</span><span>AI Agent</span><span>AI Automation</span><span>Frontend Development</span><span>Backend Development</span><span>Forward Deploy Engineering</span></div>
+              <div class="map-column map-column--quality"><span class="map-category">QUALITY</span><span>QA &amp; Testing</span></div>
+              <div class="map-column map-column--delivery"><span class="map-category">DELIVERY</span><span>Product Management</span><span>Project Management</span></div>
+              <div class="map-column map-column--growth"><span class="map-category">GROWTH</span><span>SEO</span><span>GEO</span><span>AEO</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Audience -->
+      <section class="section audience" id="audience" aria-labelledby="audience-title">
+        <div class="container narrow">
+          <p class="eyebrow">WHO WE WORK WITH</p>
+          <h2 class="section-title section-title--large" id="audience-title"><span>Built for businesses where</span><span>technology needs to create</span><span class="gradient-text">real commercial value.</span></h2>
+          <div class="audience-list">
+            <div class="audience-row"><span>01</span><div><strong>UK SMEs · £1m–£20m revenue</strong><p>Owners, operations and commercial leaders replacing manual workflows, disconnected systems and outgrown spreadsheets with software that pays for itself.</p></div><span class="best-fit" aria-label="Best fit: Ops and commercial directors">OPS &amp; COMMERCIAL DIRECTORS</span></div>
+            <div class="audience-row"><span>02</span><div><strong>Funded startups &amp; scaleups</strong><p>Founders who need an MVP in market, or a senior product and delivery brain alongside the team — without a senior-hire run-rate.</p></div><span class="best-fit" aria-label="Best fit: founders and CTOs">FOUNDERS &amp; CTOS</span></div>
+            <div class="audience-row"><span>03</span><div><strong>Professional services</strong><p>Firms whose value is expertise — and whose hours are lost to admin, documents and processes that should be automated.</p></div><span class="best-fit" aria-label="Best fit: partners and practice leads">PARTNERS &amp; PRACTICE LEADS</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section faq" id="faq" aria-labelledby="faq-title">
+        <div class="container narrow faq-grid">
+          <div><p class="eyebrow">BEFORE WE START</p><h2 class="section-title section-title--large" id="faq-title"><span>Questions before</span><span>we start.</span></h2><p class="section-lead">Eight honest answers. If yours isn’t here, ask us directly — the discovery call costs nothing.</p><a class="button button--gradient" href="#contact">Book a Free 30-Minute Discovery Call <svg class="icon"><use href="#icon-arrow" /></svg></a></div>
+          <div class="faq-list">
+            <div class="faq-item"><button type="button" aria-expanded="false" aria-controls="faq-a1"><span>How do I know if AI is even the right solution?</span><svg class="icon"><use href="#icon-plus" /></svg></button><div class="faq-answer" id="faq-a1" hidden><p>We start with the workflow and commercial outcome. If AI is not the right tool, we say so and shape a simpler system instead.</p></div></div>
+            <div class="faq-item"><button type="button" aria-expanded="false" aria-controls="faq-a2"><span>What actually happens in the discovery call?</span><svg class="icon"><use href="#icon-plus" /></svg></button><div class="faq-answer" id="faq-a2" hidden><p>A focused 30-minute conversation about the problem, current process, constraints and what a useful first deliverable would look like.</p></div></div>
+            <div class="faq-item"><button type="button" aria-expanded="false" aria-controls="faq-a3"><span>How does fixed-price scope work?</span><svg class="icon"><use href="#icon-plus" /></svg></button><div class="faq-answer" id="faq-a3" hidden><p>We define deliverables, assumptions, responsibilities and change control before work begins, then agree a fixed price for that scope.</p></div></div>
+            <div class="faq-item"><button type="button" aria-expanded="false" aria-controls="faq-a4"><span>Who actually builds the system?</span><svg class="icon"><use href="#icon-plus" /></svg></button><div class="faq-answer" id="faq-a4" hidden><p>A named senior team across product, design, engineering, QA and delivery leadership — introduced before the engagement starts.</p></div></div>
+            <div class="faq-item"><button type="button" aria-expanded="false" aria-controls="faq-a5"><span>How does the UK–Pakistan model work?</span><svg class="icon"><use href="#icon-plus" /></svg></button><div class="faq-answer" id="faq-a5" hidden><p>Your commercial relationship and day-to-day accountability sit with a UK contact. The senior delivery team works from Pakistan.</p></div></div>
+            <div class="faq-item"><button type="button" aria-expanded="false" aria-controls="faq-a6"><span>Who owns the code and the IP?</span><svg class="icon"><use href="#icon-plus" /></svg></button><div class="faq-answer" id="faq-a6" hidden><p>You do. Agreed code, documentation and intellectual property are handed over to your business.</p></div></div>
+            <div class="faq-item"><button type="button" aria-expanded="false" aria-controls="faq-a7"><span>Can you work with our existing systems?</span><svg class="icon"><use href="#icon-plus" /></svg></button><div class="faq-answer" id="faq-a7" hidden><p>Yes. We audit existing tools first and integrate where sensible, replacing only what creates real friction or risk.</p></div></div>
+            <div class="faq-item"><button type="button" aria-expanded="false" aria-controls="faq-a8"><span>What happens after launch?</span><svg class="icon"><use href="#icon-plus" /></svg></button><div class="faq-answer" id="faq-a8" hidden><p>We monitor the agreed outcome, document the system and agree a support or iteration plan that fits your team.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="section final-cta" id="contact" aria-labelledby="cta-title">
+        <svg class="cta-curves" viewBox="0 0 1440 540" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="cta-line" x1="0" x2="1"><stop offset="0" stop-color="#7657f6" stop-opacity="0" /><stop offset=".5" stop-color="#7657f6" stop-opacity=".6" /><stop offset="1" stop-color="#438cff" stop-opacity="0" /></linearGradient></defs><path d="M-100 420 C250 150 550 160 820 310 S1250 480 1540 120" /><path d="M-100 460 C250 190 550 200 820 350 S1250 520 1540 160" /><path d="M-100 500 C250 230 550 240 820 390 S1250 560 1540 200" /></svg>
+        <div class="container cta-content"><p class="eyebrow eyebrow--muted">— START THE CONVERSATION</p><h2 class="cta-title" id="cta-title"><span>Have a problem</span><span class="gradient-text">worth solving?</span></h2><p class="cta-copy">Tell us what is slowing your business down. We’ll tell you honestly whether it’s worth solving, what the right system looks like and what it would take to build — in plain English, with no obligation.</p><div class="cta-buttons"><a class="button button--gradient" href="#top">Book a Free 30-Minute Discovery Call <svg class="icon"><use href="#icon-arrow" /></svg></a><a class="button button--white" href="#faq">Tell Us About Your Project</a></div><p class="cta-note">No hard sell. Just a practical conversation about the problem and whether Horizon can help.</p></div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container narrow footer-grid">
+        <div class="footer-brand"><a class="brand brand--footer" href="#top"><svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 7h7v13h13V7h7v34h-7V27H15v14H8V7Z" fill="#fff" /><path d="M28 7h12L30 20h-6l4-13ZM15 27h14l-8 14h-6v-14Z" fill="#8b73ff" /></svg><span class="brand-copy"><strong>Horizon Consults</strong><small>UK TECHNOLOGY &amp; AI DELIVERY</small></span></a><p>UK technology &amp; AI delivery partner. We find the highest-value problem, then build the working system — with UK accountability and senior international engineering.</p></div>
+        <div class="footer-column"><strong>SERVICES</strong><a href="#services">AI Automation</a><a href="#services">AI Agents</a><a href="#services">Custom Software</a><a href="#services">MVP Development</a><a href="#leadership">Fractional PM / Product</a><a href="#services">Mobile &amp; Web Development</a></div>
+        <div class="footer-column"><strong>COMPANY</strong><a href="#process">How We Work</a><a href="#case-studies">Case Studies</a><a href="#why-horizon">About</a><a href="#delivery-model">Team</a><a href="#capabilities">Insights</a><a href="#contact">Contact</a></div>
+        <div class="footer-column"><strong>CONTACT</strong><a href="#contact">UK phone — live before launch</a><a href="#contact">Email — live before launch</a><a href="#contact">LinkedIn — live before launch</a><a href="#contact">Book a discovery call</a></div>
+      </div>
+      <div class="container narrow footer-bottom"><p>© 2026 Horizon Consults – UK-registered business. Company number, registered address and legal pages publish before launch. <a href="#top">Privacy &amp; terms</a></p></div>
+    </footer>
   </body>
 </html>
