@@ -9,6 +9,7 @@
     />
     <title>Horizon Consults — UK Technology &amp; AI Delivery Partner</title>
     <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="/src/site.css" />
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
@@ -88,7 +89,7 @@
     </svg>
 
     <header class="site-header" id="top">
-      <a class="brand" href="#top" aria-label="Horizon Consults home">
+      <a class="brand" href="/" aria-label="Horizon Consults home">
         <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
           <path d="M8 7h7v13h13V7h7v34h-7V27H15v14H8V7Z" fill="url(#brand-gradient)" />
           <path d="M28 7h12L30 20h-6l4-13ZM15 27h14l-8 14h-6v-14Z" fill="#7657f6" opacity=".85" />
@@ -100,21 +101,25 @@
       </a>
 
       <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
-        <a href="#services">Services <svg class="icon tiny"><use href="#icon-chevron" /></svg></a>
-        <a href="#process">How We Work</a>
-        <a href="#case-studies">Case Studies</a>
-        <a href="#capabilities">Insights</a>
-        <a href="#delivery-model">Company <svg class="icon tiny"><use href="#icon-chevron" /></svg></a>
+        <button class="nav-trigger" id="services-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="mega-menu">Services <svg class="icon tiny"><use href="#icon-chevron" /></svg></button>
+        <a href="/how-we-work">How We Work</a>
+        <a href="/case-studies">Case Studies</a>
+        <a href="/insights">Insights</a>
+        <button class="nav-trigger" id="company-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="company-menu">Company <svg class="icon tiny"><use href="#icon-chevron" /></svg></button>
       </nav>
 
       <div class="header-actions">
-        <a class="uk-contact" href="#contact"><svg class="icon"><use href="#icon-phone" /></svg><span>UK contact</span></a>
-        <a class="button button--primary button--small" href="#contact">Book a Call</a>
-        <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation menu">
+        <a class="uk-contact" href="/contact#uk-contact"><svg class="icon"><use href="#icon-phone" /></svg><span>UK contact</span></a>
+        <a class="button button--primary button--small" href="/book-a-call">Book a Call</a>
+        <button class="menu-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open navigation menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </header>
+
+    <div class="mega-menu" id="mega-menu" role="region" aria-label="Services menu" aria-hidden="true" hidden></div>
+    <div class="company-menu" id="company-menu" role="region" aria-label="Company menu" aria-hidden="true" hidden></div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true" hidden></nav>
 
     <main>
       <!-- Hero -->
@@ -130,8 +135,8 @@
             </h1>
             <p class="hero-intro">Horizon Consults is a UK technology and AI delivery partner. We<br class="desktop-break" /> identify the highest-value opportunity in your business — an AI<br class="desktop-break" /> workflow, a custom system or a new product — and deliver it<br class="desktop-break" /> with UK accountability, a senior team and pricing that reflects<br class="desktop-break" /> real delivery economics.</p>
             <div class="hero-actions">
-              <a class="button button--gradient" href="#contact">Book a Free 30-Minute Discovery Call <svg class="icon"><use href="#icon-arrow" /></svg></a>
-              <a class="button button--secondary" href="#process">See How We Work</a>
+              <a class="button button--gradient" href="/book-a-call">Book a Free 30-Minute Discovery Call <svg class="icon"><use href="#icon-arrow" /></svg></a>
+              <a class="button button--secondary" href="/how-we-work">See How We Work</a>
             </div>
           </div>
 
@@ -185,7 +190,7 @@
                 <div class="friction-step"><b class="step-bubble">03</b><div><strong>Build with a named senior team</strong><p>Visible progress, reviewed work</p></div></div>
                 <div class="friction-step"><b class="step-bubble">04</b><div><strong>Launch something useful</strong><p>Measured against the agreed goal</p></div></div>
               </div>
-              <a class="text-link" href="#process">Start with the problem, not the tool <svg class="icon tiny"><use href="#icon-arrow" /></svg></a>
+              <a class="text-link" href="/how-we-work">Start with the problem, not the tool <svg class="icon tiny"><use href="#icon-arrow" /></svg></a>
             </div>
           </div>
         </div>
@@ -197,11 +202,11 @@
           <p class="eyebrow">WHERE PROGRESS STALLS</p>
           <h2 class="section-title" id="problem-title"><span>Your business has moved on.</span><span class="gradient-text">Your tools have not.</span></h2>
           <div class="problem-grid">
-            <div class="problem-list" role="list">
-              <div class="problem-item is-active" role="listitem"><span>01</span><p>Your team is still copying information between inboxes, spreadsheets and systems that do not talk to each other.</p><i class="dot dot--orange"></i></div>
-              <div class="problem-item" role="listitem"><span>02</span><p>A spreadsheet that once helped now runs a critical part of the business — and only one person truly understands it.</p></div>
-              <div class="problem-item" role="listitem"><span>03</span><p>You keep hearing about AI, but no one has shown you a useful, sensible place to begin.</p></div>
-              <div class="problem-item" role="listitem"><span>04</span><p>You have a product idea, but need a team that can challenge the brief as well as build it.</p></div>
+            <div class="problem-list" aria-label="Common delivery problems">
+              <button class="problem-item is-active" type="button" data-legacy="0,1" aria-pressed="true"><span>01</span><p>Your team is still copying information between inboxes, spreadsheets and systems that do not talk to each other.</p><i class="dot dot--orange"></i></button>
+              <button class="problem-item" type="button" data-legacy="0,5" aria-pressed="false"><span>02</span><p>A spreadsheet that once helped now runs a critical part of the business — and only one person truly understands it.</p></button>
+              <button class="problem-item" type="button" data-legacy="2,3" aria-pressed="false"><span>03</span><p>You keep hearing about AI, but no one has shown you a useful, sensible place to begin.</p></button>
+              <button class="problem-item" type="button" data-legacy="4,1" aria-pressed="false"><span>04</span><p>You have a product idea, but need a team that can challenge the brief as well as build it.</p></button>
             </div>
             <div class="legacy-visual" aria-label="How disconnected work runs today">
               <div class="legacy-header"><strong>How the work runs today</strong><span class="pill pill--peach">DISCONNECTED</span></div>
@@ -344,29 +349,29 @@
           <p class="section-lead section-lead--wide">Three engagements are being documented for publication now. Each is published only with the client’s written approval — with measured outcomes, not marketing numbers.</p>
 
           <div class="case-list">
-            <article class="case-study case-study--visual-left">
+            <a class="case-study case-study--visual-left" href="/case-studies/operations-platform" aria-label="Read the operations platform case study">
               <div class="case-visual dashboard-visual">
                 <div class="browser-bar"><span class="browser-dots"><i></i><i></i><i></i></span><span>client-portal.demo / operations</span></div>
                 <div class="dashboard-content"><div class="skeleton-title"></div><div class="metric-grid"><div><span>THROUGHPUT</span><svg viewBox="0 0 100 36"><path d="M5 28 30 20 55 23 95 8" /></svg></div><div><span>EXCEPTIONS</span><b>—</b></div><div><span>HOURS RETURNED</span><b>—</b></div><div class="metric-status"><span>STATUS</span><b>IN APPROVAL</b></div></div><div class="dashboard-table"><i></i><i></i><i></i><i></i></div></div>
               </div>
               <div class="case-content"><span class="case-label">OPERATIONS PLATFORM · UK SME</span><h3>From spreadsheet operations to a system that runs the day.</h3><dl class="case-details"><div><dt>CLIENT · INDUSTRY</dt><dd>UK SME — details on publication</dd></div><div><dt>PROBLEM</dt><dd>Published with client consent</dd></div><div><dt>WHAT HORIZON BUILT</dt><dd>Case study in client approval</dd></div><div><dt>TECHNOLOGY</dt><dd>Stack confirmed at publication</dd></div><div><dt>TIMELINE</dt><dd>Confirmed at publication</dd></div><div><dt>MEASURED OUTCOME</dt><dd>With client sign-off</dd></div></dl></div>
-            </article>
+            </a>
 
-            <article class="case-study case-study--visual-right">
+            <a class="case-study case-study--visual-right" href="/case-studies/ai-approval-agent" aria-label="Read the AI approval agent case study">
               <div class="case-content"><span class="case-label">AI AGENTS · PROFESSIONAL SERVICES</span><h3>An agent that does the work — with a human still holding the pen.</h3><dl class="case-details"><div><dt>CLIENT · INDUSTRY</dt><dd>UK firm — details on publication</dd></div><div><dt>PROBLEM</dt><dd>Published with client consent</dd></div><div><dt>WHAT HORIZON BUILT</dt><dd>Case study in client approval</dd></div><div><dt>TECHNOLOGY</dt><dd>Stack confirmed at publication</dd></div><div><dt>TIMELINE</dt><dd>Confirmed at publication</dd></div><div><dt>MEASURED OUTCOME</dt><dd>With client sign-off</dd></div></dl></div>
               <div class="case-visual agent-visual">
                 <div class="browser-bar"><span class="browser-dots"><i></i><i></i><i></i></span><span>agent-console.demo / approvals</span></div>
                 <div class="agent-flow"><div class="agent-side"><div class="agent-node"><b>TRIAGE</b><i></i></div><div class="agent-node"><b>MATCHING</b><i></i></div></div><svg class="agent-lines" viewBox="0 0 220 220"><path d="M0 65 C55 65 60 110 105 110M0 165 C55 165 60 125 105 125M155 100 C190 100 190 65 220 65M155 130 C190 130 190 165 220 165" /></svg><div class="phone-mock"><div class="phone-notch"></div><span class="phone-status">Approve Invoice<br />INV – 448 £1,876</span><div class="phone-agent"><span>AGENT · 5 checks</span><p>34 Invoices matched<br />2 exceptions flagged<br />ledger updated</p></div><span class="phone-button">Approve batch</span><span class="phone-link">View exceptions</span></div><div class="agent-side agent-side--right"><div class="agent-node"><b>LEDGER SYNC</b><i></i></div><span class="human-signoff">HUMAN<br />SIGN-OFF</span></div></div>
               </div>
-            </article>
+            </a>
 
-            <article class="case-study case-study--visual-left">
+            <a class="case-study case-study--visual-left" href="/case-studies/workflow-automation" aria-label="Read the workflow automation case study">
               <div class="case-visual flow-visual">
                 <div class="browser-bar"><span class="browser-dots"><i></i><i></i><i></i></span><span>delivery-flow.demo / before-after</span></div>
                 <div class="flow-content"><span class="flow-label">BEFORE</span><div class="before-flow"><span>Phone</span><i>×</i><span>Email</span><i>×</i><span>Sheet</span><i>×</i><span>Re-type</span><i>×</i><span>Chase</span><i>×</i><span>?</span></div><span class="flow-label flow-label--blue">AFTER · ONE SYSTEM</span><div class="after-flow"><span>Capture</span><i></i><span>AI check</span><i></i><span>Approve</span><i></i><span class="green">Deliver</span><i></i></div><div class="flow-note"><span>Five handoffs, three tools, one owner</span><span>→ one flow, one system, one accountable team</span></div></div>
               </div>
               <div class="case-content"><span class="case-label">WORKFLOW AUTOMATION · UK SME</span><h3>Five handoffs become one flow.</h3><dl class="case-details"><div><dt>CLIENT · INDUSTRY</dt><dd>UK SME — details on publication</dd></div><div><dt>PROBLEM</dt><dd>Published with client consent</dd></div><div><dt>WHAT HORIZON BUILT</dt><dd>Case study in client approval</dd></div><div><dt>TECHNOLOGY</dt><dd>Stack confirmed at publication</dd></div><div><dt>TIMELINE</dt><dd>Confirmed at publication</dd></div><div><dt>MEASURED OUTCOME</dt><dd>With client sign-off</dd></div></dl></div>
-            </article>
+            </a>
           </div>
         </div>
       </section>
@@ -401,11 +406,11 @@
           <p class="section-lead">You should understand what is happening, why it matters and what comes next at every stage.</p>
           <div class="process-timeline">
             <div class="timeline-line"></div>
-            <div class="process-step is-left"><div class="process-card"><span>01</span><strong>Discover</strong><p>Understand the business problem, users, constraints and measures of success.</p><span class="process-pill">FREE · 30 MINUTES</span></div><span class="timeline-dot"></span><div class="process-icon"><svg class="icon"><use href="#icon-target" /></svg></div></div>
-            <div class="process-step is-right"><div class="process-icon"><svg class="icon"><use href="#icon-target" /></svg></div><span class="timeline-dot"></span><div class="process-card"><span>02</span><strong>Shape</strong><p>Compare options, remove assumptions and define the smallest valuable scope.</p><span class="process-pill">HIGHEST-VALUE PROBLEM</span></div></div>
-            <div class="process-step is-left"><div class="process-card"><span>03</span><strong>Agree</strong><p>Set deliverables, timeframe, price, responsibilities and change control.</p><span class="process-pill">FIXED PRICE · BEFORE WORK BEGINS</span></div><span class="timeline-dot"></span><div class="process-icon"><svg class="icon"><use href="#icon-doc" /></svg></div></div>
-            <div class="process-step is-right"><div class="process-icon"><svg class="icon"><use href="#icon-code" /></svg></div><span class="timeline-dot"></span><div class="process-card"><span>04</span><strong>Build</strong><p>Work in short cycles with visible demos, reviewed code and clear decisions.</p><span class="process-pill">WEEKLY DEMOS</span></div></div>
-            <div class="process-step is-left"><div class="process-card"><span>05</span><strong>Launch &amp; learn</strong><p>Release carefully, document properly and measure the agreed outcome.</p><span class="process-pill">MEASURED AGAINST THE OUTCOME</span></div><span class="timeline-dot"></span><div class="process-icon"><svg class="icon"><use href="#icon-chart" /></svg></div></div>
+            <div class="process-step is-left"><a class="process-card" href="/how-we-work#step-0"><span>01</span><strong>Discover</strong><p>Understand the business problem, users, constraints and measures of success.</p><span class="process-pill">FREE · 30 MINUTES</span></a><span class="timeline-dot"></span><div class="process-icon"><svg class="icon"><use href="#icon-target" /></svg></div></div>
+            <div class="process-step is-right"><div class="process-icon"><svg class="icon"><use href="#icon-target" /></svg></div><span class="timeline-dot"></span><a class="process-card" href="/how-we-work#step-1"><span>02</span><strong>Shape</strong><p>Compare options, remove assumptions and define the smallest valuable scope.</p><span class="process-pill">HIGHEST-VALUE PROBLEM</span></a></div>
+            <div class="process-step is-left"><a class="process-card" href="/how-we-work#step-2"><span>03</span><strong>Agree</strong><p>Set deliverables, timeframe, price, responsibilities and change control.</p><span class="process-pill">FIXED PRICE · BEFORE WORK BEGINS</span></a><span class="timeline-dot"></span><div class="process-icon"><svg class="icon"><use href="#icon-doc" /></svg></div></div>
+            <div class="process-step is-right"><div class="process-icon"><svg class="icon"><use href="#icon-code" /></svg></div><span class="timeline-dot"></span><a class="process-card" href="/how-we-work#step-3"><span>04</span><strong>Build</strong><p>Work in short cycles with visible demos, reviewed code and clear decisions.</p><span class="process-pill">WEEKLY DEMOS</span></a></div>
+            <div class="process-step is-left"><a class="process-card" href="/how-we-work#step-4"><span>05</span><strong>Launch &amp; learn</strong><p>Release carefully, document properly and measure the agreed outcome.</p><span class="process-pill">MEASURED AGAINST THE OUTCOME</span></a><span class="timeline-dot"></span><div class="process-icon"><svg class="icon"><use href="#icon-chart" /></svg></div></div>
           </div>
         </div>
       </section>
@@ -417,8 +422,8 @@
           <h2 class="section-title section-title--large" id="leadership-title"><span>Sometimes you don’t need</span><span>another development team.</span><span>You need <span class="gradient-text">the right person</span></span><span class="gradient-text">running the one you have.</span></h2>
           <div class="fractional-grid">
             <div class="leadership-options">
-              <div class="leadership-row"><span class="leadership-icon"><svg class="icon"><use href="#icon-calendar" /></svg></span><div><strong>Fractional Project Manager</strong><div class="rate-pills"><span>£650/day</span><span>1–5 days a week</span><span>PMI-ACP led</span></div><p>Delivery governance, project momentum, risk management and technical project leadership — for teams who need the discipline without the full-time hire.</p></div></div>
-              <div class="leadership-row"><span class="leadership-icon"><svg class="icon"><use href="#icon-target" /></svg></span><div><strong>Fractional Product Manager</strong><div class="rate-pills"><span>£650/day</span><span>1–3 days a week</span></div><p>Product strategy, roadmaps, prioritisation, requirements and delivery alignment — a senior product brain alongside your team, on the days you need it.</p></div></div>
+              <a class="leadership-row" href="/services/project-management"><span class="leadership-icon"><svg class="icon"><use href="#icon-calendar" /></svg></span><div><strong>Fractional Project Manager</strong><div class="rate-pills"><span>£650/day</span><span>1–5 days a week</span><span>PMI-ACP led</span></div><p>Delivery governance, project momentum, risk management and technical project leadership — for teams who need the discipline without the full-time hire.</p></div></a>
+              <a class="leadership-row" href="/services/product-management"><span class="leadership-icon"><svg class="icon"><use href="#icon-target" /></svg></span><div><strong>Fractional Product Manager</strong><div class="rate-pills"><span>£650/day</span><span>1–3 days a week</span></div><p>Product strategy, roadmaps, prioritisation, requirements and delivery alignment — a senior product brain alongside your team, on the days you need it.</p></div></a>
               <div class="leadership-note">Day-rate band, published openly. Minimum engagement one day a week; most clients start with two and adjust per month.</div>
             </div>
             <div class="delivery-lead-card"><strong>Your delivery lead this week</strong><div class="week-grid"><div><span>MON</span><i class="is-active"></i><small>PM</small></div><div><span>TUE</span><i></i><small>—</small></div><div><span>WED</span><i class="is-active"></i><small>PM</small></div><div><span>THU</span><i></i><small>—</small></div><div><span>FRI</span><i></i><small>—</small></div></div><ul><li><svg class="check-icon"><use href="#icon-check" /></svg>Risk register reviewed and re-scored</li><li><svg class="check-icon"><use href="#icon-check" /></svg>Sprint review run with your team</li><li><svg class="check-icon"><use href="#icon-check" /></svg>Board-ready delivery update written</li><li><svg class="check-icon"><use href="#icon-check" /></svg>Roadmap re-prioritised against commercial goals</li></ul></div>
@@ -435,11 +440,11 @@
             <div class="capability-map">
               <svg class="capability-lines" viewBox="0 0 1168 360" aria-hidden="true"><path d="M584 58V110M160 110h848M160 110v34M371 110v34M584 110v34M797 110v34M1010 110v34M160 168v30M371 168v30M584 168v30M797 168v30M1010 168v30M160 222v30M371 222v30M797 222v30M1010 222v30M371 276v30M371 330v30M1010 276v30" /></svg>
               <div class="map-root"><span class="map-logo">H</span><strong>HORIZON</strong><small>One delivery team</small></div>
-              <div class="map-column map-column--design"><span class="map-category">DESIGN</span><span>Product Design</span><span>UX Design</span><span>UI Design</span></div>
-              <div class="map-column map-column--engineering"><span class="map-category">ENGINEERING</span><span>AI Agent</span><span>AI Automation</span><span>Frontend Development</span><span>Backend Development</span><span>Forward Deploy Engineering</span></div>
-              <div class="map-column map-column--quality"><span class="map-category">QUALITY</span><span>QA &amp; Testing</span></div>
-              <div class="map-column map-column--delivery"><span class="map-category">DELIVERY</span><span>Product Management</span><span>Project Management</span></div>
-              <div class="map-column map-column--growth"><span class="map-category">GROWTH</span><span>SEO</span><span>GEO</span><span>AEO</span></div>
+              <div class="map-column map-column--design"><span class="map-category">DESIGN</span><a href="/services/product-design">Product Design</a><a href="/services/ux-ui-design">UX Design</a><a href="/services/ux-ui-design">UI Design</a></div>
+              <div class="map-column map-column--engineering"><span class="map-category">ENGINEERING</span><a href="/services/ai-agents">AI Agent</a><a href="/services/ai-automation">AI Automation</a><a href="/services/frontend-development">Frontend Development</a><a href="/services/backend-development">Backend Development</a><a href="/services/forward-deploy-engineering">Forward Deploy Engineering</a></div>
+              <div class="map-column map-column--quality"><span class="map-category">QUALITY</span><a href="/services/qa-testing">QA &amp; Testing</a></div>
+              <div class="map-column map-column--delivery"><span class="map-category">DELIVERY</span><a href="/services/product-management">Product Management</a><a href="/services/project-management">Project Management</a></div>
+              <div class="map-column map-column--growth"><span class="map-category">GROWTH</span><a href="/services/seo">SEO</a><a href="/services/geo">GEO</a><a href="/services/aeo">AEO</a></div>
             </div>
           </div>
         </div>
@@ -451,9 +456,9 @@
           <p class="eyebrow">WHO WE WORK WITH</p>
           <h2 class="section-title section-title--large" id="audience-title"><span>Built for businesses where</span><span>technology needs to create</span><span class="gradient-text">real commercial value.</span></h2>
           <div class="audience-list">
-            <div class="audience-row"><span>01</span><div><strong>UK SMEs · £1m–£20m revenue</strong><p>Owners, operations and commercial leaders replacing manual workflows, disconnected systems and outgrown spreadsheets with software that pays for itself.</p></div><span class="best-fit" aria-label="Best fit: Ops and commercial directors">OPS &amp; COMMERCIAL DIRECTORS</span></div>
-            <div class="audience-row"><span>02</span><div><strong>Funded startups &amp; scaleups</strong><p>Founders who need an MVP in market, or a senior product and delivery brain alongside the team — without a senior-hire run-rate.</p></div><span class="best-fit" aria-label="Best fit: founders and CTOs">FOUNDERS &amp; CTOS</span></div>
-            <div class="audience-row"><span>03</span><div><strong>Professional services</strong><p>Firms whose value is expertise — and whose hours are lost to admin, documents and processes that should be automated.</p></div><span class="best-fit" aria-label="Best fit: partners and practice leads">PARTNERS &amp; PRACTICE LEADS</span></div>
+            <a class="audience-row" href="/case-studies?audience=uk-smes"><span>01</span><div><strong>UK SMEs · £1m–£20m revenue</strong><p>Owners, operations and commercial leaders replacing manual workflows, disconnected systems and outgrown spreadsheets with software that pays for itself.</p></div><span class="best-fit" aria-label="Best fit: Ops and commercial directors">OPS &amp; COMMERCIAL DIRECTORS</span></a>
+            <a class="audience-row" href="/case-studies?audience=startups"><span>02</span><div><strong>Funded startups &amp; scaleups</strong><p>Founders who need an MVP in market, or a senior product and delivery brain alongside the team — without a senior-hire run-rate.</p></div><span class="best-fit" aria-label="Best fit: founders and CTOs">FOUNDERS &amp; CTOS</span></a>
+            <a class="audience-row" href="/case-studies?audience=professional-services"><span>03</span><div><strong>Professional services</strong><p>Firms whose value is expertise — and whose hours are lost to admin, documents and processes that should be automated.</p></div><span class="best-fit" aria-label="Best fit: partners and practice leads">PARTNERS &amp; PRACTICE LEADS</span></a>
           </div>
         </div>
       </section>
@@ -461,7 +466,7 @@
       <!-- FAQ -->
       <section class="section faq" id="faq" aria-labelledby="faq-title">
         <div class="container narrow faq-grid">
-          <div><p class="eyebrow">BEFORE WE START</p><h2 class="section-title section-title--large" id="faq-title"><span>Questions before</span><span>we start.</span></h2><p class="section-lead">Eight honest answers. If yours isn’t here, ask us directly — the discovery call costs nothing.</p><a class="button button--gradient" href="#contact">Book a Free 30-Minute Discovery Call <svg class="icon"><use href="#icon-arrow" /></svg></a></div>
+          <div><p class="eyebrow">BEFORE WE START</p><h2 class="section-title section-title--large" id="faq-title"><span>Questions before</span><span>we start.</span></h2><p class="section-lead">Eight honest answers. If yours isn’t here, ask us directly — the discovery call costs nothing.</p><a class="button button--gradient" href="/book-a-call">Book a Free 30-Minute Discovery Call <svg class="icon"><use href="#icon-arrow" /></svg></a></div>
           <div class="faq-list">
             <div class="faq-item"><button type="button" aria-expanded="false" aria-controls="faq-a1"><span>How do I know if AI is even the right solution?</span><svg class="icon"><use href="#icon-plus" /></svg></button><div class="faq-answer" id="faq-a1" hidden><p>We start with the workflow and commercial outcome. If AI is not the right tool, we say so and shape a simpler system instead.</p></div></div>
             <div class="faq-item"><button type="button" aria-expanded="false" aria-controls="faq-a2"><span>What actually happens in the discovery call?</span><svg class="icon"><use href="#icon-plus" /></svg></button><div class="faq-answer" id="faq-a2" hidden><p>A focused 30-minute conversation about the problem, current process, constraints and what a useful first deliverable would look like.</p></div></div>
@@ -478,18 +483,29 @@
       <!-- Final CTA -->
       <section class="section final-cta" id="contact" aria-labelledby="cta-title">
         <svg class="cta-curves" viewBox="0 0 1440 540" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="cta-line" x1="0" x2="1"><stop offset="0" stop-color="#7657f6" stop-opacity="0" /><stop offset=".5" stop-color="#7657f6" stop-opacity=".6" /><stop offset="1" stop-color="#438cff" stop-opacity="0" /></linearGradient></defs><path d="M-100 420 C250 150 550 160 820 310 S1250 480 1540 120" /><path d="M-100 460 C250 190 550 200 820 350 S1250 520 1540 160" /><path d="M-100 500 C250 230 550 240 820 390 S1250 560 1540 200" /></svg>
-        <div class="container cta-content"><p class="eyebrow eyebrow--muted">— START THE CONVERSATION</p><h2 class="cta-title" id="cta-title"><span>Have a problem</span><span class="gradient-text">worth solving?</span></h2><p class="cta-copy">Tell us what is slowing your business down. We’ll tell you honestly whether it’s worth solving, what the right system looks like and what it would take to build — in plain English, with no obligation.</p><div class="cta-buttons"><a class="button button--gradient" href="#top">Book a Free 30-Minute Discovery Call <svg class="icon"><use href="#icon-arrow" /></svg></a><a class="button button--white" href="#faq">Tell Us About Your Project</a></div><p class="cta-note">No hard sell. Just a practical conversation about the problem and whether Horizon can help.</p></div>
+        <div class="container cta-content"><p class="eyebrow eyebrow--muted">— START THE CONVERSATION</p><h2 class="cta-title" id="cta-title"><span>Have a problem</span><span class="gradient-text">worth solving?</span></h2><p class="cta-copy">Tell us what is slowing your business down. We’ll tell you honestly whether it’s worth solving, what the right system looks like and what it would take to build — in plain English, with no obligation.</p><div class="cta-buttons"><a class="button button--gradient" href="/book-a-call">Book a Free 30-Minute Discovery Call <svg class="icon"><use href="#icon-arrow" /></svg></a><a class="button button--white" href="/contact">Tell Us About Your Project</a></div><p class="cta-note">No hard sell. Just a practical conversation about the problem and whether Horizon can help.</p></div>
       </section>
     </main>
 
+    <main id="route-main" class="route-main" aria-live="polite" hidden></main>
+
     <footer class="site-footer">
       <div class="container narrow footer-grid">
-        <div class="footer-brand"><a class="brand brand--footer" href="#top"><svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 7h7v13h13V7h7v34h-7V27H15v14H8V7Z" fill="#fff" /><path d="M28 7h12L30 20h-6l4-13ZM15 27h14l-8 14h-6v-14Z" fill="#8b73ff" /></svg><span class="brand-copy"><strong>Horizon Consults</strong><small>UK TECHNOLOGY &amp; AI DELIVERY</small></span></a><p>UK technology &amp; AI delivery partner. We find the highest-value problem, then build the working system — with UK accountability and senior international engineering.</p></div>
-        <div class="footer-column"><strong>SERVICES</strong><a href="#services">AI Automation</a><a href="#services">AI Agents</a><a href="#services">Custom Software</a><a href="#services">MVP Development</a><a href="#leadership">Fractional PM / Product</a><a href="#services">Mobile &amp; Web Development</a></div>
-        <div class="footer-column"><strong>COMPANY</strong><a href="#process">How We Work</a><a href="#case-studies">Case Studies</a><a href="#why-horizon">About</a><a href="#delivery-model">Team</a><a href="#capabilities">Insights</a><a href="#contact">Contact</a></div>
-        <div class="footer-column"><strong>CONTACT</strong><a href="#contact">UK phone — live before launch</a><a href="#contact">Email — live before launch</a><a href="#contact">LinkedIn — live before launch</a><a href="#contact">Book a discovery call</a></div>
+        <div class="footer-brand">
+          <a class="brand brand--footer" href="/">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M8 7h7v13h13V7h7v34h-7V27H15v14H8V7Z" fill="#fff" />
+              <path d="M28 7h12L30 20h-6l4-13ZM15 27h14l-8 14h-6v-14Z" fill="#8b73ff" />
+            </svg>
+            <span class="brand-copy"><strong>Horizon Consults</strong><small>UK TECHNOLOGY &amp; AI DELIVERY</small></span>
+          </a>
+          <p>UK technology &amp; AI delivery partner. We find the highest-value problem, then build the working system — with UK accountability and senior international engineering.</p>
+        </div>
+        <div class="footer-column"><strong>SERVICES</strong><a href="/services/ai-automation">AI Automation</a><a href="/services/ai-agents">AI Agents</a><a href="/services/custom-software">Custom Software</a><a href="/services/mvp-development">MVP Development</a><a href="/services/project-management">Fractional PM / Product</a><a href="/services/frontend-development">Mobile &amp; Web Development</a></div>
+        <div class="footer-column"><strong>COMPANY</strong><a href="/how-we-work">How We Work</a><a href="/case-studies">Case Studies</a><a href="/about">About</a><a href="/about#delivery-model">Team</a><a href="/insights">Insights</a><a href="/contact">Contact</a></div>
+        <div class="footer-column"><strong>CONTACT</strong><a href="/contact#uk-contact">UK phone — live before launch</a><a href="/contact#uk-contact">Email — live before launch</a><a href="/contact#uk-contact">LinkedIn — live before launch</a><a href="/book-a-call">Book a discovery call</a></div>
       </div>
-      <div class="container narrow footer-bottom"><p>© 2026 Horizon Consults – UK-registered business. Company number, registered address and legal pages publish before launch. <a href="#top">Privacy &amp; terms</a></p></div>
+      <div class="container narrow footer-bottom"><p>© 2026 Horizon Consults – UK-registered business. Company number, registered address and legal pages publish before launch. <a href="/legal">Privacy &amp; terms</a></p></div>
     </footer>
   </body>
 </html>

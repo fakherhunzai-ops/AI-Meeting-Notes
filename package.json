@@ -1,5 +1,5 @@
 {
-  "name": "horizon-consults-homepage",
+  "name": "horizon-consults-website",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -10,5 +10,6 @@
   },
   "devDependencies": {
     "vite": "^8.3.5"
-  }
+  },
+  "description": "Complete Horizon Consults website with routed service, case-study, insight, company, contact and legal pages."
 }
